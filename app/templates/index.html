@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Welcome, {{ user.name }}!</h1>
+
+    <p>
+        Find travel destinations that suit your budget and interests.
+    </p>
+
+    <h2>Explore destinations</h2>
+
+    {% for destination in destinations %}
+        <div>
+            <h3>{{ destination.name }}</h3>
+            <p>Great for: {{ destination.interest }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
