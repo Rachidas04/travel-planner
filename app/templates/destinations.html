@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Explore Destinations</h1>
+
+    <p>Here are some example destinations for your next trip.</p>
+
+    {% for destination in destinations %}
+        <div>
+            <h2>{{ destination[0] }}, {{ destination[1] }}</h2>
+            <p>Sample estimated cost: €{{ destination[2] }}</p>
+            <p>Activities: {{ destination[3] }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
